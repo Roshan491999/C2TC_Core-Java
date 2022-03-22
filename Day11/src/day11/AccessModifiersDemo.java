@@ -51,8 +51,8 @@ public class AccessModifiersDemo {
 	public static void main(String[] args) {
 	int i;
 	car c= new car();	
-
-	
+    c.setspeed("100");
+    System.out.println(c.speed());
 	}
 
 }
