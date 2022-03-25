@@ -10,7 +10,7 @@ int i,j;
 public void setI(int i) {
 	this.i = i;
 }
-
+ 
 public int getJ() {
 	return j;
 }
