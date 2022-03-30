@@ -17,17 +17,17 @@ public class AppletDemo7 extends Applet
 	public void init() 
 	{
 		cbg1 = new CheckboxGroup();
-		 setLayout(new GridLayout(4,2));
-		
+		 
+		setLayout(new GridLayout(4,2));
 	add(c1= new Checkbox("tour1",cbg1,false));
 	add(c2= new Checkbox("manali"));
     add(c3= new Checkbox("tour2",cbg1,false));
     add(c4= new Checkbox("shimla"));
 	add(c5= new Checkbox("tour3",cbg1,false));
     add(c6= new Checkbox("dalhousie"));
-	add(t=new TextField());
+	add(t=new TextField(5));
 	
 	
-	}
-
+	}                                                                                                         
+     
 }
