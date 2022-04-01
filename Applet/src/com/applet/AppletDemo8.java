@@ -8,14 +8,14 @@ import java.awt.Panel;
 import java.awt.TextField;
 
 public class AppletDemo8 extends Applet{
+	panel1 p;
+	panel2 q;
 	public void init() {
-		setLayout(new GridLayout(1,1));
-		panel1 p = new panel1();
-		p.panel2();
-		add(p);
-		panel2 q = new panel2();
-		q.panel3();
-		add(q);
+		setLayout(new GridLayout(1,2));
+		 add(p = new panel1());
+		
+		add(q = new panel2());
+		
 
 
 	}
@@ -24,7 +24,7 @@ class panel1 extends Panel{
 	
 	CheckboxGroup cg=new CheckboxGroup();
 	
-	 public void panel2() {
+	 public panel1() {
 		 setLayout(new GridLayout(3,1));
 	 add(c1=new Checkbox("Tour1",cg,false));
 	 add(c2=new Checkbox("Tour2",cg,false));
@@ -32,14 +32,14 @@ class panel1 extends Panel{
 	 }
 }
 class panel2 extends Panel{
-	Checkbox c4,c5,c6;
+	Checkbox c1,c2,c3;
 	TextField t;
 	
-	public void panel3() {
+	public panel2() {
 		setLayout(new GridLayout(4,1));
-		 add(c4=new Checkbox("manali"));
-		 add(c5=new Checkbox("shimla"));
-		 add(c6=new Checkbox("dalhousie"));
+		 add(c1=new Checkbox("manali"));
+		 add(c2=new Checkbox("shimla"));
+		 add(c3=new Checkbox("dalhousie"));
 		 add(t=new TextField());
 		 }
 	
