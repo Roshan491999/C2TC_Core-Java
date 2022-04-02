@@ -3,6 +3,7 @@ package com.applet;
 import java.applet.Applet;
 import java.awt.Checkbox;
 import java.awt.CheckboxGroup;
+import java.awt.Event;
 import java.awt.GridLayout;
 import java.awt.Panel;
 import java.awt.TextField;
@@ -16,8 +17,12 @@ public class AppletDemo8 extends Applet{
 		
 		add(q = new panel2());
 		
-
-
+	}
+	public boolean action(Event e, Object O) {
+		if()
+		
+		return true;
+		
 	}
 class panel1 extends Panel{
 	Checkbox c1,c2,c3;
