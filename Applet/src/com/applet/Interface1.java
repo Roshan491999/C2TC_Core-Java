@@ -1,5 +1,5 @@
 package com.applet;
 
-public class Interface1 {
+public class Interface1    {
 
 }
