@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
 
 public class AppletPart6 extends Applet {
 	Button b1,b2;
-	TextField t;
+	static TextField t;
 	
 	public void init() {
 		add(b1 = new Button("Click"));
@@ -17,8 +17,8 @@ public class AppletPart6 extends Applet {
 		
 		
 	
-		b1.addActionListener(new A(this));
-		b2.addActionListener(new B(this));
+		b1.addActionListener(new A());
+		b2.addActionListener(new B());
 		
 		
 		
@@ -26,28 +26,28 @@ public class AppletPart6 extends Applet {
 
 	
 	}
+
 class A implements ActionListener{
 	
-	AppletPart6 ap;
-    	A(AppletPart6 ap){
-    		this.ap =ap;
-    	}
-
+	
+	
 public void actionPerformed(ActionEvent e) {
 	// TODO Auto-generated method stub
-	ap.t.setText("hello world");
+	
+	
+	AppletPart6.t.setText("hello world");
 }
 
 }
+
 class B  implements ActionListener{
-	AppletPart6 ap;
-	B(AppletPart6 ap){
-		this.ap = ap;
-	}
-
+	
+	
 public void actionPerformed(ActionEvent e) {
 // TODO Auto-generated method stub
-ap.t.setText(" ");
+	
+	
+	AppletPart6.t.setText(" ");
 }
 
 }
