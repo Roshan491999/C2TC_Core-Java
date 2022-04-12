@@ -39,7 +39,7 @@ public class Applet4 extends Applet {
  class B implements ActionListener {
 	 Applet4 ap;// declaring a variable for class where action to be performed
 	 public B(Applet4 ap) {
-		 this.ap =ap;   // the method which gives this reference to the ap
+		 this.ap = ap;   // the method which gives this reference to the ap
 	 }
 	
 	public void actionPerformed(ActionEvent arg0) {
