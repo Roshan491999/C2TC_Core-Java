@@ -26,13 +26,12 @@ public class Focused extends Applet{
 
 					
 					public void focusLost(FocusEvent arg0) {
-						// TODO Auto-generated method stub
-						
+						// TODO Auto-generated method stub 
 					}
 					});
 		
 		b2.addFocusListener(new FocusAdapter() {
-			// Focus Adapter is used when we dont want all the methods to get impemented 
+			// Focus Adapter is used when we don't want all the methods to get implemented 
 			
 			public void focusGained(FocusEvent e) {
 				t.setText(" ");
