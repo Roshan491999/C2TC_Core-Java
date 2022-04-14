@@ -1,9 +1,45 @@
 package com.equalsmethod;
-
+class A{
+	
+}
+class b{
+	
+}
 public class EqualDemo3 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		A a =new A();
+		A a=b;
+		A c =new A();
+		
+		if(a==b) {//equal
+			System.out.println("equal");
+		}
+		else {
+			System.out.println("not equal");
+		}
+        
+		if(a==c) {//not equal
+			System.out.println("equal");
+		}
+		else {
+			System.out.println("not equal");
+		}
+		
+		if(a.equals(b)) {//equal
+			System.out.println("equal");
+		}
+		else {
+			System.out.println("not equal");
+		}
+		
+		if(a.equals(c)) {//not equal
+			System.out.println("equal");
+		}
+		else {
+			System.out.println("not equal");
+		}
 
 	}
 
