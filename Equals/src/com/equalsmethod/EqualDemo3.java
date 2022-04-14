@@ -8,7 +8,7 @@ public class EqualDemo3 {
 	public static void main(String[] args) {
 		
 		A a =new A();
-		A a =b;
+		A c1 =b;
 		A c =new A();
 		
 		if(a==b) {//equal

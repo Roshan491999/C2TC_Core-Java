@@ -5,7 +5,7 @@ public class Array {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		int a[]=new int[5];//declaration & instantiation
+		int a[]= new int [10];//{10,20,30,40,50}; //declaration & instantiation
 		
 		a[0]=10;//initialization
 		a[1]=20;
