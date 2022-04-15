@@ -9,14 +9,17 @@ public class Equality {
 		int x[] = new int[5];
 		int y[] = new int [5];
 		Scanner scan = new Scanner(System.in);
+		
 		System.out.println("enter five elemnts of first array");
+		
 		for(int i=0; i < x.length; i++) {
-		      // read input
+		      // read input from user
 		      x[i] = scan.nextInt();
 		    }
 		System.out.println("enter five elemnts of second array");
+		
 		for(int i=0; i < y.length; i++) {
-		      // read input
+		      // read input from user
 		      y[i] = scan.nextInt();
 		    }
 
