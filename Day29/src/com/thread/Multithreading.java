@@ -1,6 +1,6 @@
 package com.thread;
 
-class threading extends Thread // implements Runnable
+class threading  implements Runnable
 {
 	@Override
 	public void run() {
@@ -24,9 +24,9 @@ public class Multithreading {
 		// TODO Auto-generated method stub
 		for(int i=0 ; i<4 ;i++) {
 		threading thr = new threading();
-		//Thread thr =new(Thread);    if implements Runnable
+		Thread t =new Thread(thr);    //if implements Runnable
 		///threading thr1 = new threading();
-		thr.start();}
+		t.start();}
 		//thr1.run();
 
 	}
