@@ -18,7 +18,10 @@ public class ThreadFrame5 extends Frame
 		
 		add(t1 = new TextField(15));
 		add(t2 = new TextField(15));
+		
+		
 		th1 = new Thread(()-> {
+			
 			while(true){
 					
 					t1.setText(String.valueOf(i));

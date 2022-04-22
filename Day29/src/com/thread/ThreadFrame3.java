@@ -18,7 +18,7 @@ public class ThreadFrame3 extends Frame
 		add(t1 = new TextField(15));
 		add(t2 = new TextField(15));
 		
-		C c =new C(this);
+	    C c =new C(this);
 		c.start();
 		
 		D d =new D(this);

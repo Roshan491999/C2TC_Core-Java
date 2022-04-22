@@ -36,12 +36,19 @@ public class ThreadFrame2 extends Frame implements Runnable {
 		
 		public void run() {
 			while(true){
-				Thread th = Thread.currentThread();
+				
 				t2.setText(String.valueOf(j));
 				if(j==100)
 					j=0;
 				else
 					j++;
+				
+				
+				try {
+					Thread.sleep(10);
+				} catch (Exception e) {
+					
+				}
 			}
 		}
 	}
@@ -55,7 +62,7 @@ public class ThreadFrame2 extends Frame implements Runnable {
 	public void run() {
 		// TODO Auto-generated method stub
 		while(true){
-			Thread th = Thread.currentThread();
+			
 			 {
 				t1.setText(String.valueOf(i));
 				if(i==100)
