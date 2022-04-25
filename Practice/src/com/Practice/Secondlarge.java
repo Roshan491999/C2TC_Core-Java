@@ -5,7 +5,7 @@ public class Secondlarge {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		        int arr[] = { 100,14, 46, 47, 94, 94, 52, 86, 36, 94, 89 };
+		        int arr[] = { 100,14, 46, 47, 123, 94, 52, 86, 36, 94, 89 };
 		        int largest = 0;
 		        int secondLargest = 0;
 		        System.out.println("The given array is:");
