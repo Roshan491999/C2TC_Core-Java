@@ -43,6 +43,7 @@ public boolean equals(Object o) {
 	else
 	return false;
 }
+	@Override
 	public int hashCode() {
 		return name.length();
 		

@@ -15,14 +15,15 @@ public class VectoeDemo {
 		Employee e2 = new Employee(1,"roshan",10000);
 		v1.add(s1);
 		v1.add(e1);
-		System.out.println(v1.contains(s2));
-		System.out.println(v1.contains(e2));
+		System.out.println(v1.contains(s2));  //true
+		System.out.println(v1.contains(e2));  //true
 		
 		HashSet hs1 =new HashSet();
 		hs1.add(e1);
-		System.out.println(hs1.contains(e2));
-		System.out.println(e1.hashCode());
-		System.out.println(e2.hashCode());
+		System.out.println(hs1.contains(e2));//true
+		System.out.println(e1.hashCode());   //6
+		System.out.println(e2.hashCode());   //6
+		
 		
 		
 		
