@@ -7,6 +7,7 @@ abstract class  Car1{
 		System.out.println("this is car");
 	}
 	
+
 	
 	
 }
@@ -35,7 +36,7 @@ public class AbstractDemo1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-	Car1 c = new Maruti1(); //upcasting
+	Car1 c = new Maruti1(); //upcasting //Cannot instantiate the type Maruti1 because it is also abstract in nature
 		
 		Maruti1 m = (Maruti1)c;
 		
