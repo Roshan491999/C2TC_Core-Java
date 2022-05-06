@@ -12,7 +12,7 @@ public class TryCatchDemo {
 			System.in.read();
 			
 		}
-		catch(InterruptedException e) {
+		/*catch(InterruptedException e) {
 		}
 		catch(FileNotFoundException e) {
 		}
@@ -20,7 +20,7 @@ public class TryCatchDemo {
 		}
 		catch(Exception e) {
 	
-		}
+		}*/
 		catch(Exception e) {
 			if(e instanceof InterruptedException ) {
 			}
