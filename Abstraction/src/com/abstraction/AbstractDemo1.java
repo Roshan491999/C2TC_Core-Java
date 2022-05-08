@@ -1,44 +1,40 @@
 package com.abstraction;
 
 
-abstract class  Car1{
+abstract class  Shopacc{
 	
-	public void m1() {
-		System.out.println("this is car");
-	}
-	
-
+	int accNo;
+	String accNm;
+	float charges;
 	
 	
-}
-
-abstract class Maruti1 extends Car1{
-	
-	void start(){
-		System.out.println("maruti is a car");
-	}
-	public void m1() {
-		System.out.println("this is maruti");
-	}
 	
 	
 	
 }
 
-abstract class Creta1 extends Car1{
+abstract class Primeacc extends Shopacc{
+	
+	
+	
+	
+	
+}
+
+abstract class Normalacc extends Shopacc{
 
 	
 	}
 	
-}
+
 
 public class AbstractDemo1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-	Car1 c = new Maruti1(); //upcasting //Cannot instantiate the type Maruti1 because it is also abstract in nature
+		 Shopacc c = new Primeacc(); //upcasting
 		
-		Maruti1 m = (Maruti1)c;
+		 Primeacc m = (Primeacc)c;//downcasting
 		
 
 
