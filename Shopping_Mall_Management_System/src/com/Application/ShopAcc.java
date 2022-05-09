@@ -38,12 +38,12 @@ public abstract class ShopAcc  // this is Super class
 		this.accNm = accNm;
 		this.charges = charges;
 	}
-	void bookProduct(float f) 
+	public void bookProduct(float f) 
 	{
 		
 		
 	}
-	void items(float f)
+	public void items(float f)
 	{
 		
 	}
@@ -71,7 +71,7 @@ class PrimeAcc extends ShopAcc  //subclass extends superclass
 	
 	public PrimeAcc(boolean isPrime)
 	{
-		super();
+		
 		this.isPrime = isPrime;
 	}
 
@@ -89,7 +89,7 @@ class PrimeAcc extends ShopAcc  //subclass extends superclass
 	}
 
 	@Override
-	void bookProduct(float f) 
+	public void bookProduct(float f) 
 	{
 		
 	}
@@ -124,7 +124,7 @@ class NormalAcc extends ShopAcc   //subclass extends superclass
 	}
 
 	@Override
-	void bookProduct(float f) 
+	public void bookProduct(float f) 
 	{
 	
 	}
