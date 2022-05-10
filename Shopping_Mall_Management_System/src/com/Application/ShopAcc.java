@@ -64,7 +64,7 @@ class PrimeAcc extends ShopAcc  //subclass extends superclass
 	private boolean isPrime;
 	static private final  float deliveryCharges=0;
 	
-	public PrimeAcc() {
+	public PrimeAcc(int accNo, String accNm, float charges,boolean isPrime) {
 		
 	}
     
@@ -112,7 +112,7 @@ class NormalAcc extends ShopAcc   //subclass extends superclass
 
 	private final float deliveryCharges=0;
 	
-	public NormalAcc() {
+	public NormalAcc(int accNo, String accNm, float charges,float deliveryCharges ) {
 		
 	}
 	
