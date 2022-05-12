@@ -11,7 +11,7 @@ public class StudentPreparedStatement {
 		Connection con = null;
 		PreparedStatement pt = null;
 		try {
-			Class.forName("");
+			Class.forName("com.mysql.cj.jdbc.Driver");
 			con =DriverManager.getConnection("jdbc:mysql://localhost:3306/b3tns","root","Rosh@n1999");
 			pt= con.prepareStatement("insert into student1 values(?,?,?)");
 			pt.setInt(1, 1);
@@ -32,13 +32,23 @@ public class StudentPreparedStatement {
 			if(pt!=null);
 			pt.close();
 			pt=null;
+		}
+       catch(Exception e){
+			
+		}
+		
+		try {
+			if(con!=null);
+			con.close();
+			con=null;
 			
 		}
 		catch(Exception e){
 			
 		}
 		
-
+		}
 	}
+	
 
-}
+
