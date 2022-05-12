@@ -24,10 +24,21 @@ public class GSPrimeAcc extends PrimeAcc {
 	}
 	
 	
+	
+
+
+	public float getCharges() {
+		return Charges;
+	}
+
+
 	@Override
 	public String toString() {
-		return "GSPrimeAcc [Charges=" + Charges + "]";
+		return "Dear prime useryour [Charges are=" + getCharges() + " ]";
 	}
+
+
+	
 
 	
 	}
