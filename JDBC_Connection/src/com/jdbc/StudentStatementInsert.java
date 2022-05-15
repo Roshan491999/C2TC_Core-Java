@@ -17,9 +17,9 @@ public class StudentStatementInsert {
 		p.put("password","Rosh@n1999");
 		Connection con= DriverManager.getConnection(url,p);
 		Statement st = con.createStatement();
-		String query = "insert into student value('A', 'Aniket' ,45)";
+		String query = "insert into student value(3, 'Aniket' ,45)";
 		int i = st.executeUpdate(query);
-		boolean t = st.execute("insert into student value('B', 'Roshan' ,55 )");
+		boolean t = st.execute("insert into student value(5, 'Roshan' ,55 )");
 		System.out.println("no of rows affected"+i);
 		System.out.println("query executed"+t);
 		System.out.println("Row inserted successfully");
