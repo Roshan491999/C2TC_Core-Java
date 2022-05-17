@@ -32,8 +32,9 @@ public class Employee implements Serializable{
 	
 	private static final long serialVersionUID =1L;
 	@Id
-	
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	
+	
 	
 	private int empId;
 	private String empName;
