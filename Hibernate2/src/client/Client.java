@@ -178,16 +178,49 @@ public class Client {
        student.setStudentCertificate(certificate);
 		em.persist(student);
 		
+		student1.setStudentCertificate(certificate1);
+		em.persist(student1);
+		
+		
 		//1 to 1 college and admin
 		college.setAdmin(admin);
 		em.persist(college);
+		
+		college1.setAdmin(admin1);
+		em.persist(college1);
+		
 		
 		//1 to 1 college and user
 		college.setUser(user);
 		em.persist(college);
 		
+		college1.setUser(user1);
+		em.persist(college1);
+		
+		System.out.println("one to one mapping succesfull");
 		
 		
+		
+		//MAPPING ONE TO MANY
+		student.setCollege(college);
+		em.persist(student);
+		
+		student1.setCollege(college1);
+		em.persist(student1);
+		
+		placement.setCollege(college);
+		em.persist(placement);
+		
+		placement1.setCollege(college1);
+		em.persist(placement1);
+		
+		certificate.setCollege(college);
+		em.persist(certificate);
+		
+		certificate1.setCollege(college1);
+		em.persist(certificate1);
+		
+		System.out.println("one to many mapping succesfull");
 	
 		
 	

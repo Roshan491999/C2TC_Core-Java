@@ -9,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -52,6 +53,9 @@ public class Student implements Serializable {
 	@JoinColumn(name ="Certificate_ID")
 	private Certificate studentCertificate;
 	
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name ="Std_ID")
+	private College college;
 	
 	public Student() {
 		
@@ -148,6 +152,18 @@ public Certificate getStudentCertificate() {
 
 	public void setStudentCertificate(Certificate studentCertificate) {
 		this.studentCertificate = studentCertificate;
+	}
+	
+	
+
+
+public College getCollege() {
+		return college;
+	}
+
+
+	public void setCollege(College college) {
+		this.college = college;
 	}
 
 

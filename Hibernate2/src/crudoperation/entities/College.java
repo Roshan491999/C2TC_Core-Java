@@ -1,6 +1,7 @@
 package crudoperation.entities;
 
 import java.io.Serializable;
+import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -9,6 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -35,6 +37,15 @@ public class College implements Serializable{
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name ="Admin_ID")
 	private Admin studentAdmin;
+	
+	@OneToMany(mappedBy="college")
+	private Set<Student> student;
+	
+	@OneToMany(mappedBy="college")
+	private Set<Placement> placement;
+	
+	@OneToMany(mappedBy="college")
+	private Set<Certificate> certificate;
 	
 	public College() {
 		
@@ -88,6 +99,34 @@ public class College implements Serializable{
 
 	public void setAdmin(Admin studentAdmin) {
 		this.studentAdmin = studentAdmin;
+	}
+	
+	
+
+	public Set<Student> getStudent() {
+		return student;
+	}
+
+	public void setStudent(Set<Student> student) {
+		this.student = student;
+	}
+	
+	
+
+	public Set<Placement> getPlacement() {
+		return placement;
+	}
+
+	public void setPlacement(Set<Placement> placement) {
+		this.placement = placement;
+	}
+
+	public Set<Certificate> getCertificate() {
+		return certificate;
+	}
+
+	public void setCertificate(Set<Certificate> certificate) {
+		this.certificate = certificate;
 	}
 
 	@Override

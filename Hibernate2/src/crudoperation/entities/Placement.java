@@ -3,9 +3,12 @@ package crudoperation.entities;
 import java.io.Serializable;
 import java.time.LocalDate;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -30,6 +33,10 @@ public class Placement implements Serializable{
 	
 	@Column(name="date")
 	private LocalDate date;
+	
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name ="placement_Id")
+	private College college;
 	
 	
 	public Placement() {
@@ -83,6 +90,16 @@ public class Placement implements Serializable{
 
 	public void setDate(LocalDate date) {
 		this.date = date;
+	}
+	
+	
+
+	public College getCollege() {
+		return college;
+	}
+
+	public void setCollege(College college) {
+		this.college = college;
 	}
 
 	@Override
