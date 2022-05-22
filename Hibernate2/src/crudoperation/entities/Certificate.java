@@ -35,7 +35,7 @@ public class Certificate implements Serializable{
 	private Student student;
 	
 	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name ="Certificate_Id")
+	@JoinColumn(name ="College_Id")
 	private College college;
 	
 	

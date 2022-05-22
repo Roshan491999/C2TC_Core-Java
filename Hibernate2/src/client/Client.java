@@ -95,7 +95,7 @@ public class Client {
 		//FOR COLLEGE
 		//Row1
 		College college =new College();	
-		//college.setCollegeId(343);
+		college.setCollegeId(343);
 		college.setCollegeName("BCOE");
 		college.setLocation("Thane");
 		//cs.addCollege(college);
@@ -103,7 +103,7 @@ public class Client {
 		
 		//Row2
 		College college1 =new College();	
-		//college1.setCollegeId(344);
+		college1.setCollegeId(344);
 		college1.setCollegeName("ACPCOI");
 		college1.setLocation("Navi Mumbai");
 		//cs.addCollege(college1);
@@ -261,7 +261,5 @@ public class Client {
 	}
 
 	
-	
-
 
 }

@@ -35,7 +35,7 @@ public class Placement implements Serializable{
 	private LocalDate date;
 	
 	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name ="placement_Id")
+	@JoinColumn(name ="College_Id")
 	private College college;
 	
 	
