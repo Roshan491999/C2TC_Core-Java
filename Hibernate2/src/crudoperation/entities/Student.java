@@ -1,25 +1,35 @@
 package crudoperation.entities;
 
+import java.io.Serializable;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
+import crudoperation.service.CertificateService;
 
 @Entity
 
 @Table(name = "Student")
 
 
-public class Student {
+public class Student implements Serializable {
+	
+	private static final long serialVersionUID =1L; 
 	
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name="ID")
     private int id;
 	
 	
-	@Column(name="Name")
+	@Column(name="name")
 	private String name;
 	
 	@Column(name="roll")
@@ -38,13 +48,17 @@ public class Student {
 	private long hallTicketNo;
 	
 	
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name ="Certificate_ID")
+	private Certificate studentCertificate;
+	
 	
 	public Student() {
 		
 	}
 	
 	
-	public Student(int id, String name, long roll, String qualification, int year, String course, long hallTicketNo) {
+	public Student(int id, String name, long roll, String qualification, int year, String course, long hallTicketNo, Certificate studentCertificate) {
 		
 		this.id=id;
 		this.name = name;
@@ -53,6 +67,7 @@ public class Student {
 		this.year = year;
 		this.course = course;
 		this.hallTicketNo = hallTicketNo;
+		this.studentCertificate=studentCertificate;
 	}
 
 
@@ -124,6 +139,27 @@ public class Student {
 	public void setHallTicketNo(long hallTicketNo) {
 		this.hallTicketNo = hallTicketNo;
 	}
+
+
+public Certificate getStudentCertificate() {
+		return studentCertificate;
+	}
+
+
+	public void setStudentCertificate(Certificate studentCertificate) {
+		this.studentCertificate = studentCertificate;
+	}
+
+
+@Override
+	public String toString() {
+		return "Student [id=" + id + ", name=" + name + ", roll=" + roll + ", qualification=" + qualification
+				+ ", year=" + year + ", course=" + course + ", hallTicketNo=" + hallTicketNo + ", studentCertificate="
+				+ studentCertificate + "]";
+	}
+
+
+	
 
 
 	
