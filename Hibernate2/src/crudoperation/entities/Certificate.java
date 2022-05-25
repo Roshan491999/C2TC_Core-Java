@@ -92,7 +92,7 @@ public class Certificate implements Serializable{
 
 
 	public void setCollege(String college) {
-		this.Stdcollege = Stdcollege;
+		this.Stdcollege = college;
 	}
 	
 	

@@ -227,7 +227,7 @@ public class Client {
 		
 		//student.setCertificate(cf);
 		
-		//em.persist(student);
+		//em.persist(student);*/
 		System.out.println("Row Inserted");
 		
 		em.getTransaction().commit();		
