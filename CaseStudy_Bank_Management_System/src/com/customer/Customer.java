@@ -11,15 +11,15 @@ public class Customer
 	public static void main(String[] args) 
 	{
 		MMBankFactory mmbfactory = new MMBankFactory();
-		mmbfactory.getNewSavingAcc(20312, "Roshan", 20000, true);
-		mmbfactory.getNewCurrentAcc(20313, "Aniket", 30000, 20000);
+		mmbfactory.getNewSavingAcc(14545, "Roshan", 1500, true);
+		mmbfactory.getNewCurrentAcc(15651, "Suraj", 3000, 15000);
 		
 		MMSavingAcc mmsaving = new MMSavingAcc();
 		mmsaving.getAccNo();
 		mmsaving.getAccNm();
 		mmsaving.getAccBal();
 		
-		mmsaving.withdraw(700);
+		mmsaving.withdraw(750);
 		mmsaving.toString();
 		
 		MMCurrentAcc mmcurrent = new MMCurrentAcc();
@@ -28,7 +28,7 @@ public class Customer
 		mmcurrent.getAccBal();
 		mmcurrent.getCreditLimit();
 		
-		mmcurrent.withdraw(400);
+		mmcurrent.withdraw(1100);
 		mmcurrent.toString();
 	}
 }
