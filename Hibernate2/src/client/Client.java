@@ -88,13 +88,13 @@ public class Client {
 	    admin1.setAdminId(1453);
 	    admin1.setAdminName("payal");
 	    admin1.setAdminPassword("payal@563");
-	    //as.addAdmin(admin1);
+	    //as.addAdmin(admin1);*/
 		
 	    
 	    
 		//FOR COLLEGE
 		//Row1
-		College college =new College();	
+	    College college =new College();	
 		college.setCollegeId(343);
 		college.setCollegeName("BCOE");
 		college.setLocation("Thane");
@@ -225,36 +225,47 @@ public class Client {
 		
 	
 		
-		//student.setCertificate(cf);
-		
-		//em.persist(student);*/
-		System.out.println("Row Inserted");
-		
-		em.getTransaction().commit();		
-		em.close();
-		factory.close();
 		
 		
 		
 		
-		/*//retrive operation
-		student = ss.findStudentById(2);
+		
+		//retrive operation
+	/*	student = ss.findStudentById(1);
 		System.out.println("ID"+student.getId());
 		System.out.println(student);
 		
 		//Update Operation
-		student = ss.findStudentById(3);
+		student = ss.findStudentById(2);
 		student.setName("Neha");
 		student.setQualification("B.com");
 		ss.updateStudent(student);
 		System.out.println("Row updated");
-		System.out.println(student);
+		System.out.println(student);*/
 		
 		//Delete Operation 
-		student = ss.findStudentById(1);
+		/*student = ss.findStudentById(1);
 		System.out.println(student);
 		ss.removeStudent(student);
+		System.out.println("Row deleted");
+
+		
+		college = cs.findByCollegeId(343);
+		System.out.println(college);
+		cs.removeCollege(college);
+		System.out.println("Row deleted");
+		
+		
+		admin = as.findByAdminId(1234);
+		System.out.println(admin);
+		as.removeAdmin(admin);
 		System.out.println("Row deleted");*/
+		
+//System.out.println("Row deleted");
+		
+		em.getTransaction().commit();		
+		em.close();
+		factory.close();
 		
 		
 
