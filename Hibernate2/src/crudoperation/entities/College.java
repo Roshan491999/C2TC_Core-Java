@@ -30,18 +30,13 @@ public class College implements Serializable{
 	@Column(name = "collegelocation")
 	private String location;
 	
-	@OneToOne(cascade = CascadeType.ALL)
-   @JoinColumn(name ="User_Id")
-	private User studentUser;
+	@OneToOne(mappedBy="studentCollege")
+	private User user;
 	
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name ="Admin_ID")
-	private Admin studentAdmin;
-	
-	@OneToMany(mappedBy="college")
+	@OneToMany(mappedBy="college" ,orphanRemoval = true, cascade = CascadeType.PERSIST)
 	private Set<Student> student;
 	
-	@OneToMany(mappedBy="college")
+	@OneToMany(mappedBy="college",orphanRemoval = true, cascade = CascadeType.PERSIST)
 	private Set<Placement> placement;
 	
 	@OneToMany(mappedBy="college")
@@ -51,13 +46,12 @@ public class College implements Serializable{
 		
 	}
 
-	public College(long collegeId, String collegeName, String location, User studentUser, Admin studentAdmin) {
+	public College(long collegeId, String collegeName, String location ) {
 		
 		this.collegeId = collegeId;
 		this.collegeName = collegeName;
 		this.location = location;
-		this.studentUser = studentUser;
-		this.studentAdmin = studentAdmin;
+		
 	}
 
 	public long getCollegeId() {
@@ -82,23 +76,6 @@ public class College implements Serializable{
 
 	public void setLocation(String location) {
 		this.location = location;
-	}
-	
-
-	public User getUser() {
-		return studentUser;
-	}
-
-	public void setUser(User studentUser) {
-		this.studentUser = studentUser;
-	}
-
-	public Admin getAdmin() {
-		return studentAdmin;
-	}
-
-	public void setAdmin(Admin studentAdmin) {
-		this.studentAdmin = studentAdmin;
 	}
 	
 	

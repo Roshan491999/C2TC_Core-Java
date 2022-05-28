@@ -2,9 +2,11 @@ package crudoperation.entities;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -29,14 +31,20 @@ public class User implements Serializable{
 	@Column(name="UserPassword")
 	private String userPassword;
 	
-   @OneToOne(mappedBy="studentUser")
-	private College college;
+   
+	@OneToOne(cascade = CascadeType.ALL)
+	   @JoinColumn(name ="College_id")
+		private College studentCollege;
+		
+		@OneToOne(cascade = CascadeType.ALL)
+		@JoinColumn(name ="Admin_ID")
+		private Admin studentAdmin;
 
 	public User() {
 		
 	}
 	
-	public User(long userId, String userName, String userType, String userPassword) {
+	public User(long userId, String userName, String userType, String userPassword,Admin studentAdmin,College studentCollege) {
 		super();
 		this.userId = userId;
 		this.userName = userName;
@@ -76,6 +84,22 @@ public class User implements Serializable{
 
 	public void setUserPassword(String userPassword) {
 		this.userPassword = userPassword;
+	}
+
+	public College getStudentCollege() {
+		return studentCollege;
+	}
+
+	public void setStudentCollege(College studentCollege) {
+		this.studentCollege = studentCollege;
+	}
+
+	public Admin getStudentAdmin() {
+		return studentAdmin;
+	}
+
+	public void setStudentAdmin(Admin studentAdmin) {
+		this.studentAdmin = studentAdmin;
 	}
 
 	@Override

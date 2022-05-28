@@ -1,3 +1,19 @@
+//                                     java C2TC Program (TNS & CG)  (Batch M13 & Batch B11)
+
+/*                                    PROJECT NAME :-WEB BASED PLACEMENT MANAGEMENT SYSTEM
+                                                        GROUP NO:- 1  
+                                                            
+                                                   Name of the members:-
+
+                                               1) Roshan Ramesh Pawar(GL) (Batch M13)
+                                               2) Naseer Ahmed            (Batch B11)
+                                               3) Payal Jadhav            (Batch M13)
+                                               4) Kumendra Maroti Chakole (Batch M13)
+*/
+
+
+
+
 package client;
 
 import java.time.LocalDate;
@@ -48,7 +64,7 @@ public class Client {
 		
 		
 		
-		//FOR STUDENT
+//---------------------------------------------- X FOR STUDENT X----------------------------------------------------------------------------
 		//Row1
 		Student student = new Student();
 		student.setName("aniket");
@@ -57,7 +73,7 @@ public class Client {
 		student.setYear(2021);
 		student.setHallTicketNo(1323);
 		student.setCourse("CS");
-	//ss.addStudent(student);
+	
 		System.out.println("Row Inserted");
 		
 		
@@ -69,13 +85,33 @@ public class Client {
 		student1.setYear(2022);
 		student1.setHallTicketNo(1324);
 		student1.setCourse("MECH");
-		//ss.addStudent(student1);
+		
 		System.out.println("Row Inserted");
 		
 		
 		
+		/*//retrive operation
+				student = ss.findStudentById(1);
+				System.out.println("ID"+student.getId());
+				System.out.println(student);
+				
+		//Update Operation
+				student = ss.findStudentById(2);
+				student.setName("Neha");
+				student.setQualification("B.com");
+				ss.updateStudent(student);
+				System.out.println("Row updated");
+				System.out.println(student);
+		//Delete Operation 
+				student = ss.findStudentById(1);
+				System.out.println(student);
+				ss.removeStudent(student);
+				System.out.println("Row deleted");*/
 		
-		//FOR ADMIN
+		
+//----------------------------------------------- X FOR ADMIN X----------------------------------------------------------------------- ----------
+				
+				
 		//Row1
 		Admin admin = new Admin();
 		admin.setAdminId(1234);
@@ -88,11 +124,11 @@ public class Client {
 	    admin1.setAdminId(1453);
 	    admin1.setAdminName("payal");
 	    admin1.setAdminPassword("payal@563");
-	    //as.addAdmin(admin1);*/
+	    //as.addAdmin(admin1);
 		
 	    
 	    
-		//FOR COLLEGE
+//-------------------------------------------------X	FOR COLLEGE  X-------------------------------------------------------------------------
 		//Row1
 	    College college =new College();	
 		college.setCollegeId(343);
@@ -110,7 +146,9 @@ public class Client {
 		
 		
 		
-		//FOR USER
+//---------------------------------------------------------X FOR USER  X-------------------------------------------------------------------
+		
+		
 		//Row1
 		User user = new User();
 		user.setUserId(7898); 
@@ -130,7 +168,7 @@ public class Client {
 		
 			
 	     
-		//FOR CERTIFICATE
+//-----------------------------------------------------X  FOR CERTIFICATE  X---------------------------------------------------------------
 		//Row1
 		Certificate certificate= new Certificate();
 		certificate.setCollege("BCOE");
@@ -147,7 +185,7 @@ public class Client {
 		
 		
 		
-		//FOR PLACEMENTS
+//----------------------------------------------------X	FOR PLACEMENTS  X------------------------------------------------
 		//Row 1
 		LocalDate date =LocalDate.of(2022, 5, 25);
 		Placement  placement = new Placement() ;
@@ -172,7 +210,9 @@ public class Client {
 	
 		
 		
-	     //MAPPING ONE TO ONE
+	 // -------------------------------------------------X  MAPPING ONE TO ONE X-------------------------------------------------------
+		
+		
 		
 		//1 to 1 student and certificate
        student.setStudentCertificate(certificate);
@@ -182,26 +222,31 @@ public class Client {
 		em.persist(student1);
 		
 		
-		//1 to 1 college and admin
-		college.setAdmin(admin);
-		em.persist(college);
+		//1 to 1 admin and user
+		user.setStudentAdmin(admin);
+		em.persist(user);
 		
-		college1.setAdmin(admin1);
-		em.persist(college1);
+		user1.setStudentAdmin(admin1);
+		em.persist(user1);
 		
 		
 		//1 to 1 college and user
-		college.setUser(user);
-		em.persist(college);
+		user.setStudentCollege(college);
+		em.persist(user);
 		
-		college1.setUser(user1);
-		em.persist(college1);
+		user1.setStudentCollege(college1);
+		em.persist(user1);
 		
 		System.out.println("one to one mapping succesfull");
 		
 		
 		
-		//MAPPING ONE TO MANY
+		// -------------------------------------------------X  MAPPING ONE TO MANY X-------------------------------------------------------   
+		
+		
+		
+		
+		
 		student.setCollege(college);
 		em.persist(student);
 		
@@ -230,38 +275,31 @@ public class Client {
 		
 		
 		
-		//retrive operation
-	/*	student = ss.findStudentById(1);
-		System.out.println("ID"+student.getId());
-		System.out.println(student);
 		
-		//Update Operation
-		student = ss.findStudentById(2);
-		student.setName("Neha");
-		student.setQualification("B.com");
-		ss.updateStudent(student);
+		
+		
+		/*college = cs.findByCollegeId(343);
+		college.setCollegeId(325);
+		college.setCollegeName("dryhdr");
+		cs.updateCollege(college);
 		System.out.println("Row updated");
-		System.out.println(student);*/
+		System.out.println(college);
 		
-		//Delete Operation 
-		/*student = ss.findStudentById(1);
-		System.out.println(student);
-		ss.removeStudent(student);
-		System.out.println("Row deleted");
+		
 
 		
 		college = cs.findByCollegeId(343);
 		System.out.println(college);
 		cs.removeCollege(college);
-		System.out.println("Row deleted");
+		System.out.println("Row deleted");*/
 		
 		
-		admin = as.findByAdminId(1234);
+		/*admin = as.findByAdminId(1234);
 		System.out.println(admin);
 		as.removeAdmin(admin);
 		System.out.println("Row deleted");*/
 		
-//System.out.println("Row deleted");
+         //System.out.println("Row deleted");
 		
 		em.getTransaction().commit();		
 		em.close();

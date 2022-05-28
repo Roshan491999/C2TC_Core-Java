@@ -27,7 +27,7 @@ public class Admin implements Serializable{
 	private String adminPassword;
 	
 	@OneToOne(mappedBy="studentAdmin")
-	private College college;
+	private User user;
 
 	
 	public Admin() {
