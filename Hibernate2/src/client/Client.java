@@ -7,7 +7,7 @@
 
                                                1) Roshan Ramesh Pawar(GL) (Batch M13)
                                                2) Naseer Ahmed            (Batch B11)
-                                               3) Payal Jadhav            (Batch M13)
+                                               3) Payal Santosh Jadhav    (Batch M13)
                                                4) Kumendra Maroti Chakole (Batch M13)
 */
 
@@ -102,6 +102,7 @@ public class Client {
 				ss.updateStudent(student);
 				System.out.println("Row updated");
 				System.out.println(student);
+				
 		//Delete Operation 
 				student = ss.findStudentById(1);
 				System.out.println(student);
@@ -109,7 +110,7 @@ public class Client {
 				System.out.println("Row deleted");*/
 		
 		
-//----------------------------------------------- X FOR ADMIN X----------------------------------------------------------------------- ----------
+//----------------------------------------------- X FOR ADMIN X---------------------------------------------------------------------------
 				
 				
 		//Row1
@@ -127,8 +128,22 @@ public class Client {
 	    //as.addAdmin(admin1);
 		
 	    
+	   /*  //Update Operation 
+	    admin = as.findByAdminId(1234);
+	     as.updateAdmin(admin);
+	 	System.out.println("Row updated");
+	     
+	    //Delete Operation 
+	    admin = as.findByAdminId(1234);
+		System.out.println(admin);
+		as.removeAdmin(admin);
+		System.out.println("Row deleted");*/
+		
+		
+		
+		
 	    
-//-------------------------------------------------X	FOR COLLEGE  X-------------------------------------------------------------------------
+//-------------------------------------------------X	FOR COLLEGE  X---------------------------------------------------------------------
 		//Row1
 	    College college =new College();	
 		college.setCollegeId(343);
@@ -144,7 +159,23 @@ public class Client {
 		college1.setLocation("Navi Mumbai");
 		//cs.addCollege(college1);
 		
+		/*
+		// Update Operation
+		 college = cs.findByCollegeId(343);
+		college.setCollegeId(325);
+		college.setCollegeName("dryhdr");
+		cs.updateCollege(college);
+		System.out.println("Row updated");
+		System.out.println(college);
 		
+		
+		//Delete Operation
+		college = cs.findByCollegeId(343);
+		System.out.println(college);
+		cs.removeCollege(college);
+		System.out.println("Row deleted");*/
+		
+	
 		
 //---------------------------------------------------------X FOR USER  X-------------------------------------------------------------------
 		
@@ -185,7 +216,7 @@ public class Client {
 		
 		
 		
-//----------------------------------------------------X	FOR PLACEMENTS  X------------------------------------------------
+//----------------------------------------------------X	FOR PLACEMENTS  X-------------------------------------------------------------------
 		//Row 1
 		LocalDate date =LocalDate.of(2022, 5, 25);
 		Placement  placement = new Placement() ;
@@ -241,9 +272,7 @@ public class Client {
 		
 		
 		
-		// -------------------------------------------------X  MAPPING ONE TO MANY X-------------------------------------------------------   
-		
-		
+// -------------------------------------------------X  MAPPING ONE TO MANY X-------------------------------------------------------   
 		
 		
 		
@@ -268,38 +297,9 @@ public class Client {
 		System.out.println("one to many mapping succesfull");
 	
 		
-	
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		/*college = cs.findByCollegeId(343);
-		college.setCollegeId(325);
-		college.setCollegeName("dryhdr");
-		cs.updateCollege(college);
-		System.out.println("Row updated");
-		System.out.println(college);
-		
-		
-
-		
-		college = cs.findByCollegeId(343);
-		System.out.println(college);
-		cs.removeCollege(college);
-		System.out.println("Row deleted");*/
-		
-		
-		/*admin = as.findByAdminId(1234);
-		System.out.println(admin);
-		as.removeAdmin(admin);
-		System.out.println("Row deleted");*/
-		
-         //System.out.println("Row deleted");
+         System.out.println("Tables Created Successfully");
 		
 		em.getTransaction().commit();		
 		em.close();
